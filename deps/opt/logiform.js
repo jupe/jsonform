@@ -140,9 +140,8 @@
             // Create a mockup for condition
             condition_mockup = 
                 '<div class="lf-condition">' +
-                    //'<div class="btn-group">' +
-                    '<div>' +
-                        (logiform.settings.readonly?'':('<button type="button" class="btn btn-warning lf-button-remove-condition logiform">' +
+                    '<div class="btn-group">' +
+                        (logiform.settings.readonly?'':('<button type="button" class="btn btn-xs btn-warning lf-button-remove-condition logiform">' +
                         logiform.settings.text['remove-condition'] +
                         '</button>')) +
                         fieldContent +
@@ -158,7 +157,7 @@
                 '<div class="lf-condition-group">' +
                     logicalOperatorContent +
                     (logiform.settings.readonly?'':(
-                   '<button '+(logiform.settings.readonly?'disabled ':'')+'type="button" class="btn btn-danger pull-right lf-button-remove-condition-group logiform">' +
+                   '<button '+(logiform.settings.readonly?'disabled ':'')+'type="button" class="btn btn-xs btn-danger pull-right lf-button-remove-condition-group logiform">' +
                     logiform.settings.text['remove-condition-group'] +
                     '</button>')) +
                     '<div class="lf-condition-list">' +
@@ -166,10 +165,10 @@
                     //'<div class="lf-buttons btn-group">' +
                     '<div class="lf-buttons">' +
                          (logiform.settings.readonly?'':(
-                        '<button '+(logiform.settings.readonly?'disabled ':'')+'type="button" class="btn btn-primary lf-button-add-condition logiform">' +
+                        '<button '+(logiform.settings.readonly?'disabled ':'')+'type="button" class="btn btn-sm lf-button-add-condition logiform">' +
                         logiform.settings.text['add-condition'] +
                         '</button>') +
-                        '<button '+(logiform.settings.readonly?'disabled ':'')+'type="button" class="btn btn-default lf-button-add-condition-group logiform">' +
+                        '<button '+(logiform.settings.readonly?'disabled ':'')+'type="button" class="btn btn-sm lf-button-add-condition-group logiform">' +
                         logiform.settings.text['add-condition-group'] +
                         '</button>') +
                     '</div>' +

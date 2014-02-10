@@ -48,6 +48,10 @@
               }
           ]
       }
-    }
+    },
+    {
+        "type": "submit",
+        "title": "Submit"
+      },
   ]
 }
