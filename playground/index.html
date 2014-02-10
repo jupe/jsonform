@@ -4,29 +4,39 @@
     <meta charset="utf-8" />
     <title>JSON Form Playground</title>
     <style>
-      @import url("../deps/opt/bootstrap.css");
+      
+      @import url("../deps/opt/css/bootstrap.css");
+      @import url("../deps/opt/css/bootstrap-glyphicons.css");
       @import url("../deps/opt/spectrum.css");
       @import url("../deps/opt/chosen.min.css");
+      @import url("../deps/opt/logiform.css");
+      
+
+      //this fix logiform related 
+      .logiform {
+        padding: 0px 10px;
+        height: 20px;
+      }
 
       h2 { font-weight: 200; }
-      .navbar-inner {
+      .navbar-default {
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
       }
-      .row-fluid: { margin: 0.5em; }
+      .row: { margin: 0.5em; }
       .tagline {
         padding: 10px;
         font-weight: 200;
-        margin-top: -1em;
+        margin-top: -1em;s
       }
       .tagline p { font-size: 16px; }
 
       .navbar .factory a {
         display: block;
         padding: 10px 20px 10px;
-        background: url(http://factory.joshfire.com/css/images/topbar-beta-logo.png) 22px -3px no-repeat;
-        text-indent: -9999px;
+        //background: url(http://factory.joshfire.com/css/images/topbar-beta-logo.png) 22px -3px no-repeat;
+        //text-indent: -9999px;
         width: 178px;
       }
 
@@ -70,20 +80,27 @@
   </head>
   
   <body>
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#">JSON Form Playground</a>
-          <div>
-            <ul class="nav">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">JSON Form Playground</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
               <li><a href="#">Home</a></li>
               <li><a href="http://github.com/joshfire/jsonform/wiki">Documentation</a></li>
               <li><a href="http://github.com/joshfire/jsonform">Project on github</a></li>
             </ul>
-            <ul class="nav pull-right">
+            <ul class="nav navbar-nav navbar-right">
               <li class="factory"><a href="http://factory.joshfire.com">Joshfire Factory</a>
             </ul>
-          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -92,11 +109,11 @@
       <p>Choose a JSON Form example below and check the generated form. Refer to the <a href="http://github.com/joshfire/jsonform/wiki">documentation</a> for details and directions to extend the form.</p>
     </div>
 
-    <div class="row-fluid">
-      <div class="span5">
+    <div class="row">
+      <div class="col-md-5">
         <form id="form" class="form-vertical"></form>
       </div>
-      <div class="span7">
+      <div class="col-md-7">
         <h2>Generated form</h2>
         <div id="result" class="well">(please wait)</div>
       </div>
@@ -126,6 +143,7 @@
     <script src="../deps/opt/ace/mode-markdown.js"></script>
     <script src="../deps/opt/jquery.transloadit2.js"></script>
     <script src="../deps/opt/chosen.jquery.min.js"></script>
+    <script src="../deps/opt/logiform.js"></script>
 
     <script src="../lib/jsonform.js"></script>
 

@@ -1,0 +1,53 @@
+{
+  "schema": {
+    "gender": {
+      "type": "string",
+      "title": "Gender"
+    }
+  },
+  "form": [
+    {
+      "key": "gender",
+      "type": "logiform",
+      "logiform": {
+         'data': '{"$or":[{"$and":[{"devicetype":{"$eq":"iPad"}},{"language":{"$eq":"ko"}}]},{"$and":[{"devicetype":{"$eq":"iPhone"}},{"version":{"$gt":"3.0"}}]},{"country":{"$eq":"jp"}}]}',
+          'schema': [
+              {
+                  'id': 'devicetype', 
+                  'title': 'Device Type',
+                  'type': 'array',
+                  'enum': [
+                      'iPad',
+                      'iPhone'
+                  ]
+              },
+              {
+                  'id': 'version',
+                  'title': 'Application Version',
+                  'type': 'string'
+              },
+              {
+                  'id': 'language',
+                  'title': 'Language',
+                  'type': 'array',
+                  'enum': [
+                      ['ko', 'Korean'],
+                      ['en', 'English'],
+                      ['ja', 'Japanese']
+                  ]
+              },
+              {
+                  'id': 'country',
+                  'title': 'Country',
+                  'type': 'array',
+                  'enum': [
+                      ['kr', 'Korea'],
+                      ['us', 'United States'],
+                      ['jp', 'Japan']
+                  ]
+              }
+          ]
+      }
+    }
+  ]
+}

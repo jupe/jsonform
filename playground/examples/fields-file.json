@@ -1,0 +1,17 @@
+{
+  "schema": {
+    "file1": {
+      "type": "string",
+      "title": "File"
+    },
+    "file2": {
+      "type": "string",
+      "title": "File"
+    }
+  },
+  "form": [
+    { "key": "file1", "type": "file" },
+    { "key": "file2", "type": "file-hosted-public" },
+    { "key": "file3", "type": "file-transloadit" }
+  ]
+}
