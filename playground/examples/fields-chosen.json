@@ -10,6 +10,9 @@
     {
       "key": "gender",
       "type": "chosen",
+      "chosen": {
+         "width": "99%"
+      },
       "options": {
         "male": "Dude",
         "female": "Dudette",
